@@ -8,5 +8,10 @@
     position: relative;
     width:50px;
     height:50px;
+    opacity: 0.5;
+}
 
+.wpp-icon:hover{
+    opacity: 1;
+    cursor: pointer;
 }
