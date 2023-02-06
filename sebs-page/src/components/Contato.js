@@ -1,9 +1,14 @@
-import "./Contato.css"
+import React from "react"
 
 function Contato() {
     return (
-        <div className="d-flex flex-row p-2">
-            <p>
+        <div className="d-flex flex-row p-2 col-12">
+            <img
+                src={require("../assets/sebs.jpg")}
+                alt="Sebastião Venâncio"
+                className="imagem col-6"
+            />
+            <p className="col-6 px-3 text-justify">
                 Contato: 
                 Agende sua sessão ou mande uma mensagem para tirar dúvidas :)
                 (61) 983733961
@@ -13,14 +18,8 @@ function Contato() {
                 https://forms.gle/5XMoLTPF9yMgoJaf7
 
             </p>
-
-            <img
-                src={require("../assets/sebs.jpg")}
-                alt="Sebastião Venâncio"
-                className="imagem"
-            />
         </div>
     );
 }
 
-export default Contato;
+export default Contato

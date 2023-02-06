@@ -1,9 +1,14 @@
-import "./Perguntas.css"
+import React from "react"
 
 function Perguntas() {
     return (
-        <div className="d-flex flex-row p-2">
-            <p>
+        <div className="d-flex flex-row p-2 col-12">
+            <img
+                src={require("../assets/sebs.jpg")}
+                alt="Sebastião Venâncio"
+                className="imagem col-6"
+            />
+            <p className="col-6 px-3 text-justify">
                 Perguntas frequentes:
                 - Qual a diferença entre psicoterapia e psicanálise?
                 A psicanálise, diferente do que muitos pensam, não se trata de uma abordagem da psicologia, ela surgiu de maneira independente e se constitui enquanto prática independente. O que ocorre é que há uma sobreposição entre as áreas, tendo em vista a importância da psicanálise para a psicoterapia.
@@ -13,14 +18,8 @@ function Perguntas() {
                 - Devo fazer terapia ou análise?
                 Não existe um momento correto para começar! Acredito que o desejo ou a necessidade de entrar em um processo terapêutico ou de análise, diante de alguma dificuldade, sofrimento ou interesse em se conhecer, já são motivos suficientes para buscar atendimento. 
             </p>
-
-            <img
-                src={require("../assets/sebs.jpg")}
-                alt="Sebastião Venâncio"
-                className="imagem"
-            />
         </div>
     );
 }
 
-export default Perguntas;
+export default Perguntas

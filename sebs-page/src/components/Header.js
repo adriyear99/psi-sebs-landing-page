@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import "./Header.css"
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const Header = () => {
@@ -31,13 +30,16 @@ const Header = () => {
             {width < 550 ? 
                 <Navbar bg="light" expand="lg">
                     <Container fluid>
-                        <Navbar.Brand href="#">Psi Sebs</Navbar.Brand>
+                        <Navbar.Brand href="#home">
+                            Sebastião Venâncio<br/>
+                            Psicologia e Psicanálise
+                        </Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
-                            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '200px' }} navbarScroll>
+                            <Nav className="me-auto my-2 my-lg-0 texto" style={{ maxHeight: '200px' }} navbarScroll>
                                     <NavDropdown.Item href="#action3">Sobre Mim</NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">Abordagem</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Perguntas Frequentes</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4">Perguntas</NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">Serviços</NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">Contatos</NavDropdown.Item>
                                     <NavDropdown.Divider/>
@@ -51,12 +53,15 @@ const Header = () => {
         
                 <Navbar className='bg-light navigation'>
                     <Container>
-                        <Navbar.Brand href="#home">Psi Sebs</Navbar.Brand>
+                        <Navbar.Brand href="#home">
+                            Sebastião Venâncio<br/>
+                            Psicologia e Psicanálise
+                        </Navbar.Brand>
                         <Navbar.Toggle />
-                        <Nav className="justify-content-end">
+                        <Nav className="justify-content-end texto">
                             <Nav.Link href="#home">Sobre Mim</Nav.Link>
                             <Nav.Link href="#features">Abordagem</Nav.Link>
-                            <Nav.Link href="#pricing">Perguntas Frequentes</Nav.Link>
+                            <Nav.Link href="#pricing">Perguntas</Nav.Link>
                             <Nav.Link href="#pricing">Serviços</Nav.Link>
                             <Nav.Link href="#pricing">Contatos</Nav.Link>
                         </Nav>
