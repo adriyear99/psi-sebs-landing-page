@@ -12,7 +12,7 @@ import Contato from './components/Contato'
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app no-padding">
       <Header/>
       <Main/>
       <Whatsapp/>

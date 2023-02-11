@@ -13,8 +13,8 @@ const Header = () => {
 
 
     useEffect(()=>{
-        console.log("Height: ",height)
-        console.log("Width: ",width)
+        // console.log("Height: ",height)
+        // console.log("Width: ",width)
 
     },[height,width])
 
@@ -27,30 +27,7 @@ const Header = () => {
 
     return (
         <div>
-            {width < 550 ? 
-                <Navbar bg="light" expand="lg">
-                    <Container fluid>
-                        <Navbar.Brand href="#home">
-                            Sebastião Venâncio<br/>
-                            Psicologia e Psicanálise
-                        </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="navbarScroll" />
-                        <Navbar.Collapse id="navbarScroll">
-                            <Nav className="me-auto my-2 my-lg-0 texto" style={{ maxHeight: '200px' }} navbarScroll>
-                                    <NavDropdown.Item href="#action3">Sobre Mim</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Abordagem</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Perguntas</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Serviços</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Contatos</NavDropdown.Item>
-                                    <NavDropdown.Divider/>
-                                    <NavDropdown.Item href="#">Voltar para o topo</NavDropdown.Item>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-            
-            :
-        
+            {width > 720 &&
                 <Navbar className='bg-light navigation'>
                     <Container>
                         <Navbar.Brand href="#home">

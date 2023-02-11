@@ -4,12 +4,13 @@ import './Main.css'
 
 function Main() {
     return (
-        <div className="opacity-50 col-12">
-            <img
-                className="d-block w-100 imagem-principal"
-                src={require("../assets/sebs.jpg")}
-                alt="Sebastião Venâncio"
-            />
+        <div className="menu-container opacity-50">
+            <div className="imagem-principal"/>
+            {/* <img
+                className="d-block w-100 imagem-principal img-responsive"
+                src={require("../assets/sala.jpg")}
+                alt="Sala de consulta Sebastião Venâncio"
+            /> */}
         </div>
 
 

@@ -1,3 +1,11 @@
 .imagem-principal{
-    height:500px;
+    padding-top:56%;
+    width: 100%;
+}
+
+.menu-container{
+    max-width: 100%;
+    margin:0 auto;
+    background: url('../assets/sala.jpg') no-repeat center;
+    background-size: cover;
 }
