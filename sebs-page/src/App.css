@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Literata', serif;
 }
 
 .text-justify{
@@ -16,4 +16,5 @@
   object-fit: fill; */
   height:auto;
   max-width: 100%;
+  border-radius: 50%;
 }

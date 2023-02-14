@@ -4,7 +4,7 @@ import './Main.css'
 
 function Main() {
     return (
-        <div className="menu-container opacity-50">
+        <div className="menu-container opacity-50 mb-5">
             <div className="imagem-principal"/>
             {/* <img
                 className="d-block w-100 imagem-principal img-responsive"

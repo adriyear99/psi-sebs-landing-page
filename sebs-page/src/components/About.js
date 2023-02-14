@@ -11,7 +11,7 @@ function About() {
                     className="imagem col-12 col-md-4 mb-3"
                 />
                 
-                <p className="col-12 col-md-8 px-3 text-justify">
+                <p className="col-12 col-md-8 pe-5 text-justify">
                     Sobre mim:
                     Oiê! me chamo Sebastião e me formei como psicólogo na Universidade de Brasília (UnB) em 2021, onde atualmente também faço mestrado em Psicologia Clínica e Cultura sobre a clínica psicanalítica de adolescentes. 
                     Parafraseando o psicanalista Fabio Hermann em “O que é Psicanálise”, ao longo de minha caminhada, percebi e percebo que as pessoas são muitas vezes estranhas e absurdas, e, enquanto pessoa, também me descobri estranho e absurdo.
