@@ -38,8 +38,8 @@ const Header = () => {
                         <Nav className="justify-content-end texto">
                             <Nav.Link href="#sobre">Sobre Mim</Nav.Link>
                             <Nav.Link href="#abordagem">Abordagem</Nav.Link>
-                            <Nav.Link href="#perguntas">Perguntas</Nav.Link>
                             <Nav.Link href="#servicos">Serviços</Nav.Link>
+                            <Nav.Link href="#perguntas">Perguntas</Nav.Link>
                             <Nav.Link href="#contatos">Contatos</Nav.Link>
                         </Nav>
                     </Container>

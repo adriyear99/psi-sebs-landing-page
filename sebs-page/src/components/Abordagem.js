@@ -5,7 +5,7 @@ function Abordagem() {
     return (
         <div id="abordagem" className="p-2 my-5">
             <div className="row">
-                <img src={require("../assets/sebs.jpg")} alt="Sebastião Venâncio" className="imagem imagem-redonda col-12 col-md-4 mb-3 px-5"/>
+                <img src={require("../assets/sebs.jpg")} alt="Sebastião Venâncio" className="imagem imagem-redonda col-12 col-md-5 mb-3 px-5"/>
                 <section className="col-12 col-md-7 text-justify">
                     <h1 style={{textAlign:"center"}}>Abordagem</h1>
                     <p className="texto m-4">
