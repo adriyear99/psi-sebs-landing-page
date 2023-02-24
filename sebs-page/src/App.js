@@ -9,6 +9,7 @@ import Abordagem from './components/Abordagem'
 import Servicos from './components/Servicos'
 import Perguntas from './components/Perguntas'
 import Contato from './components/Contato'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
       <Servicos/>
       <Perguntas/>
       <Contato/>
+      <Footer/>
     </div>
   )
 }

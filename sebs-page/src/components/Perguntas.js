@@ -7,7 +7,7 @@ function Perguntas() {
         <div id="perguntas" className="p-2 mt-3 mb-4">
             <h1 className="col-12 text-center mb-4">Perguntas Frequentes</h1>
             <div className="row justify-content-center">
-                <Accordion defaultActiveKey="0" className="col-10 col-md-8 col-lg-6">
+                <Accordion className="col-10 col-md-8 col-lg-6">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Qual a diferença entre psicoterapia e psicanálise?</Accordion.Header>
                         <Accordion.Body className="py-4">

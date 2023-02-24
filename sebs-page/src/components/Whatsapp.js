@@ -10,7 +10,7 @@ const Whatsapp = () => {
 
     return (
         <div className='position-fixed icon-container' onClick={redirectToChat}>
-            <img src={require("../assets/whatsapp.png")} className="wpp-icon"/>
+            <img src={require("../assets/whatsapp.png")} alt="WhatsApp" className="wpp-icon"/>
         </div>
     )
 }

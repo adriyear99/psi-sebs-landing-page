@@ -5,6 +5,14 @@
   font-family: 'Literata', serif;
 }
 
+@media (min-width: 720px) {
+  body{
+    overflow-x: hidden;
+  }
+  
+}
+
+
 .texto{
   color: darkgray;
 }

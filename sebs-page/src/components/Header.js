@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+// import NavDropdown from 'react-bootstrap/NavDropdown'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
                             <Nav.Link href="#abordagem">Abordagem</Nav.Link>
                             <Nav.Link href="#servicos">Serviços</Nav.Link>
                             <Nav.Link href="#perguntas">Perguntas</Nav.Link>
-                            <Nav.Link href="#contatos">Contatos</Nav.Link>
+                            <Nav.Link href="#contato">Contato</Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>       
