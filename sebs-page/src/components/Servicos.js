@@ -16,30 +16,39 @@ function Servicos() {
     return (
         <div id="servicos" className="p-2 mt-3 mb-5">
             <h1 className="col-12 mb-4 text-center">Serviços</h1>
-            <div className="row justify-content-center mb-5 imagem-freud d-flex align-items-center">
-                <Card className="col-7 col-md-3 mb-4 mb-md-0 card">
-                    <Card.Img variant="top" src={require("../assets/adult.jpg")}/>
-                    <Card.ImgOverlay>
-                        <Card.Body>
-                            <Card.Title className="mb-3 text-light">Adultos</Card.Title>
-                            <Button variant="primary" className="mx-auto" onClick={handleShowAdult}>
-                                Ver Detalhes
-                            </Button>
-                        </Card.Body>
-                    </Card.ImgOverlay>
+            <div className="row justify-content-center mb-5">
+                <Card className="col-7 col-md-3 mb-4 mb-md-0 d-flex align-items-center">
+                    <Card.Img 
+                        variant="top" 
+                        src={require("../assets/adult.jpg")} 
+                        className="card-img" 
+                        alt="Adultos"
+                    />
+                    <Card.Body className="card-body">
+                        <Card.Title className="mb-3 servico">Adultos</Card.Title>
+                    </Card.Body>
+                    <Card.Footer className="w-100 text-center bg-light border-0 bg-white">
+                        <Button variant="primary" onClick={handleShowAdult}>
+                            Ver Detalhes
+                        </Button>
+                    </Card.Footer>
                 </Card>
 
-                <Card className="col-7 col-md-3 offset-md-1">
-                    <Card.Img variant="top" src={require("../assets/teen.jpg")}/>
-                    <Card.ImgOverlay>
-                        <Card.Body>
-                            <Card.Title className="mb-3 text-light">Adolescentes</Card.Title>
-                            <Button variant="primary" className="mx-auto" onClick={handleShowTeen}>
-                                Ver Detalhes
-                            </Button>
-                        </Card.Body>
-                    </Card.ImgOverlay>
-
+                <Card className="col-7 col-md-3 offset-md-1 d-flex align-items-center">
+                    <Card.Img 
+                        variant="top" 
+                        src={require("../assets/teen.jpg")}  
+                        className="card-img" 
+                        alt="Adolescentes"
+                    />
+                    <Card.Body className="card-body">
+                        <Card.Title className="mb-3 servico">Adolescentes</Card.Title>
+                    </Card.Body>
+                    <Card.Footer className="w-100 text-center bg-light border-0 bg-white">
+                        <Button variant="primary" onClick={handleShowTeen}>
+                            Ver Detalhes
+                        </Button>
+                    </Card.Footer>
                 </Card>
             </div>
 
