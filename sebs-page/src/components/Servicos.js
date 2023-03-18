@@ -30,7 +30,7 @@ function Servicos() {
                 </Card>
 
                 <Card className="col-7 col-md-3 offset-md-1">
-                    <Card.Img variant="top" src={require("../assets/teen.jpg")} />
+                    <Card.Img variant="top" src={require("../assets/teen.jpg")}/>
                     <Card.ImgOverlay>
                         <Card.Body>
                             <Card.Title className="mb-3 text-light">Adolescentes</Card.Title>

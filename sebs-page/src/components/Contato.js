@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react"
+import UseWhatsapp from 'whatsapp-react-component'
 
 // Icons
 import { BsFillEnvelopeFill } from "react-icons/bs"
@@ -15,28 +16,31 @@ function Contato() {
     const [name,setName] = useState("")
     const [phone,setPhone] = useState("")
     const [email,setEmail] = useState("")
-    const [tipoAtendimento,setTipoAtendimento] = useState("")
-    const [tipoPaciente,setTipoPaciente] = useState("")
+    const [tipoAtendimento,setTipoAtendimento] = useState("1")
+    const [tipoPaciente,setTipoPaciente] = useState("1")
     const [mensagem,setMensagem] = useState("")
-
     const [total,setTotal] = useState("")
-
-    const sendWpp = () => {
-        console.log('teste')
-    }
 
     const concatMessage = () => {
         setTotal(
-            `Nome: ${name}\n
-            Telefone: ${phone}\n
-            E-mail: ${email}\n
-            Tipo de atendimento: ${tipoAtendimento}\n
-            Tipo de paciente: ${tipoPaciente}\n
-            Mensagem: ${mensagem}`
+            `Nome: ${name}\n` +
+            `Telefone: ${phone}\n` +
+            `E-mail: ${email}\n` +
+            `Tipo de atendimento: ${tipoAtendimento==="1"?"Online":"Presencial"}\n` +
+            `Tipo de paciente: ${tipoPaciente==="1"?"Adulto":"Adolescente"}\n` +
+            `Mensagem: ${mensagem}`
         )
     }
 
-    useEffect(()=>{sendWpp()},[total])
+    useEffect(()=>{
+        const sendWpp = () => {
+            if(total !== ""){
+                UseWhatsapp('5561983733961',total)
+                setTotal("")
+            }
+        }
+        sendWpp()
+    },[total])
 
 
     return (
@@ -63,15 +67,15 @@ function Contato() {
                 <Form className="col-12 col-md-5 offset-md-1 my-3">
                     <div className="row justify-content-center">
                         <Form.Group className="mb-3 col-11 col-md-6" controlId="nome">
-                            <Form.Control type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nome"/>
+                            <Form.Control type="text" value={name} maxLength={60} onChange={e => setName(e.target.value)} placeholder="Nome"/>
                         </Form.Group>
                         <Form.Group className="mb-3 col-11 col-md-6" controlId="telefone">
-                            <Form.Control type="text" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Celular (WhatsApp)"/>
+                            <Form.Control type="text" value={phone} maxLength={20} onChange={e => setPhone(e.target.value)} placeholder="Celular (WhatsApp)"/>
                         </Form.Group>
                     </div>
                     <div className="row justify-content-center">
                         <Form.Group className="mb-3 col-11 col-md-12" controlId="email">
-                                <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="E-mail"/>
+                                <Form.Control type="email" value={email} maxLength={60} onChange={e => setEmail(e.target.value)} placeholder="E-mail"/>
                         </Form.Group>
                     </div>
                     <div className="row justify-content-center">
