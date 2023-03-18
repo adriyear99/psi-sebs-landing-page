@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState,useEffect } from "react"
 
 // Icons
 import { BsFillEnvelopeFill } from "react-icons/bs"
@@ -11,10 +11,38 @@ import { Button } from "react-bootstrap"
 
 
 function Contato() {
+
+    const [name,setName] = useState("")
+    const [phone,setPhone] = useState("")
+    const [email,setEmail] = useState("")
+    const [tipoAtendimento,setTipoAtendimento] = useState("")
+    const [tipoPaciente,setTipoPaciente] = useState("")
+    const [mensagem,setMensagem] = useState("")
+
+    const [total,setTotal] = useState("")
+
+    const sendWpp = () => {
+        console.log('teste')
+    }
+
+    const concatMessage = () => {
+        setTotal(
+            `Nome: ${name}\n
+            Telefone: ${phone}\n
+            E-mail: ${email}\n
+            Tipo de atendimento: ${tipoAtendimento}\n
+            Tipo de paciente: ${tipoPaciente}\n
+            Mensagem: ${mensagem}`
+        )
+    }
+
+    useEffect(()=>{sendWpp()},[total])
+
+
     return (
         <div id="contato" className="p-2 mt-5">
             <div className="row justify-content-center">
-                <div className="col-11 col-md-4 offset-md-1 my-3 text-justify">
+                <div className="col-10 col-md-4 my-3 text-justify">
                     <h2>Agende sua sessão</h2>
                     <p className="texto">Preencha os dados ao lado ou mande uma mensagem que entrarei em contato para tirar dúvidas ou marcar uma sessão!</p>
                     <ul className="list-unstyled">
@@ -35,15 +63,15 @@ function Contato() {
                 <Form className="col-12 col-md-5 offset-md-1 my-3">
                     <div className="row justify-content-center">
                         <Form.Group className="mb-3 col-11 col-md-6" controlId="nome">
-                            <Form.Control type="text" placeholder="Nome"/>
+                            <Form.Control type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nome"/>
                         </Form.Group>
                         <Form.Group className="mb-3 col-11 col-md-6" controlId="telefone">
-                            <Form.Control type="text" placeholder="Celular (WhatsApp)"/>
+                            <Form.Control type="text" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Celular (WhatsApp)"/>
                         </Form.Group>
                     </div>
                     <div className="row justify-content-center">
                         <Form.Group className="mb-3 col-11 col-md-12" controlId="email">
-                                <Form.Control type="email" placeholder="E-mail"/>
+                                <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="E-mail"/>
                         </Form.Group>
                     </div>
                     <div className="row justify-content-center">
@@ -51,29 +79,31 @@ function Contato() {
                             <Form.Label className="text-warning">
                                 Qual opção é melhor para você?
                             </Form.Label>
-                            <Form.Select aria-label="Tipo de Atendimento">
-                                <option value="1" selected>Online</option>
+                            <Form.Select aria-label="Tipo de Atendimento" defaultValue={"1"} onChange={e => setTipoAtendimento(e.target.value)}>
+                                <option value="1">Online</option>
                                 <option value="2">Presencial</option>
                             </Form.Select>
                         </Form.Group>
-                        <Form.Group className="mb-3 col-11 col-md-6" controlId="tipoPaciente">
+                        <Form.Group className="mb-3 col-11 col-md-6" controlId="tipoPaciente" onChange={e => setTipoPaciente(e.target.value)}>
                             <Form.Label className="text-warning">
                                 Qual tipo de atendimento?
                             </Form.Label>
-                            <Form.Select aria-label="Tipo de Paciente">
-                                <option value="1" selected>Adulto</option>
+                            <Form.Select aria-label="Tipo de Paciente" defaultValue={"1"}>
+                                <option value="1">Adulto</option>
                                 <option value="2">Adolescente</option>
                             </Form.Select>
                         </Form.Group>
                     </div>
                     <div className="row justify-content-center">
                         <Form.Group className="mb-3 col-11 col-md-12" controlId="mensagem">
-                            <Form.Control as="textarea" rows={4} placeholder="Mensagem"/>
+                            <Form.Control as="textarea" rows={4} maxLength={200} placeholder="Mensagem" onChange={e => setMensagem(e.target.value)}/>
                         </Form.Group>
                     </div>
                     <div className="row justify-content-center">
-                        <Form.Group className="mb-3 col-11 col-md-12" controlId="mensagem">
-                            <Button variant="warning" type="submit" className="col-12">Enviar</Button>
+                        <Form.Group className="mb-3 col-11 col-md-12" controlId="enviar">
+                            <Button variant="warning" type="button" className="col-12" onClick={concatMessage}>
+                                Enviar
+                            </Button>
                         </Form.Group>
                     </div>
                 </Form>
