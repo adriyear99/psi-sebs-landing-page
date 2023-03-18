@@ -60,9 +60,7 @@ function Servicos() {
                     Atendimento destinado a pessoas com mais de 18 anos e tem o foco na compreensão do sujeito e como ele se relaciona com o ambiente e na escuta de suas dores. Algumas demandas de adultos que chegam até mim e que possuo experiência para trabalhar são: transtornos psicológicos (como borderline e bipolaridade), depressão, vícios, luto, problemas com o trabalho, ideação suicida, dentre outros. Gosto de trabalhar em parceria com outros profissionais, como psiquiatras, quando for necessário e pertinente ao caso.
                 </Modal.Body>
                 <Modal.Footer>
-                <Button variant="secondary" onClick={handleCloseAdult}>
-                    Close
-                </Button>
+                <Button variant="secondary" onClick={handleCloseAdult}>Fechar</Button>
                 </Modal.Footer>
             </Modal>
 
@@ -74,9 +72,7 @@ function Servicos() {
                     Atendimento destinado a pessoas com idade entre 12 e 18 anos e tem o foco no processo de crescimento e amadurecimento, suas questões e particularidades dessa fase do desenvolvimento. Dentre algumas queixas comuns entre os adolescentes atualmente incluem ansiedade, depressão, dificuldade na escola e/ou no relacionamento com os pais, sexualidade, dúvida em relação ao futuro, além de transtornos e comportamentos como automutilação, uso de substâncias, dentre outros. Realizo também orientação profissional, caso seja de interesse do adolescente. É necessário o consentimento dos pais para realizar o processo terapêutico, e eles podem ser chamados para consultas pontuais.
                 </Modal.Body>
                 <Modal.Footer>
-                <Button variant="secondary" onClick={handleCloseTeen}>
-                    Close
-                </Button>
+                <Button variant="secondary" onClick={handleCloseTeen}>Fechar</Button>
                 </Modal.Footer>
             </Modal>
         </div>
