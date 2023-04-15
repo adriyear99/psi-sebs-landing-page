@@ -37,7 +37,7 @@
 }
 
 #servicos{
-  background-color: lightgray;
+  background-color: #f5c771;
 }
 
 .servico{
@@ -72,4 +72,15 @@
   .imagem-freud{
     height: 80vh;
   }
+}
+
+@font-face {
+  font-family: frutiger;
+  src: url('./assets/fonts/Frutiger\ Neue\ W02\ Book.ttf');
+}
+
+.frutiger-font{
+  font-family: frutiger;
+  color:lightcyan;
+  font-weight: bold;
 }

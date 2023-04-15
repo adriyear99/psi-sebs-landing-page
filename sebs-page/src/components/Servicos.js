@@ -15,7 +15,7 @@ function Servicos() {
 
     return (
         <div id="servicos" className="p-2 mt-3 mb-5">
-            <h1 className="col-12 mb-4 text-center">Serviços</h1>
+            <h1 className="col-12 mb-4 text-center frutiger-font">Serviços</h1>
             <div className="row justify-content-center mb-5">
                 <Card className="col-7 col-md-3 mb-4 mb-md-0 d-flex align-items-center">
                     <Card.Img 

@@ -5,8 +5,8 @@ function Sobre() {
     return (
         <div id="sobre" className="p-5">
             <div className="row justify-content-center">
-                <section className="col-12 col-md-5 order-md-2 px-3 mb-5 mb-md-0  d-flex flex-wrap align-items-center">
-                    <img src={require("../assets/sebs2.jpg")} alt="Sebastião Venâncio" className="imagem"/>
+                <section className="col-12 col-md-5 order-md-2 px-3 mb-5 mb-md-0 d-flex flex-wrap align-items-center">
+                    <img src={require("../assets/sebs4.jpg")} alt="Sebastião Venâncio" className="imagem"/>
                 </section>
                 <section className="col-11 col-md-7 order-md-1 text-justify px-0 px-md-5">
                     <h1 className="text-center mb-3">Sobre Mim</h1>

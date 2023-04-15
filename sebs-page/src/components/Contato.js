@@ -80,7 +80,7 @@ function Contato() {
                     </div>
                     <div className="row justify-content-center">
                         <Form.Group className="mb-3 col-11 col-md-6" controlId="tipoAtendimento">
-                            <Form.Label className="text-warning">
+                            <Form.Label className="text-warning frutiger-font">
                                 Qual opção é melhor para você?
                             </Form.Label>
                             <Form.Select aria-label="Tipo de Atendimento" defaultValue={"1"} onChange={e => setTipoAtendimento(e.target.value)}>
@@ -89,7 +89,7 @@ function Contato() {
                             </Form.Select>
                         </Form.Group>
                         <Form.Group className="mb-3 col-11 col-md-6" controlId="tipoPaciente" onChange={e => setTipoPaciente(e.target.value)}>
-                            <Form.Label className="text-warning">
+                            <Form.Label className="text-warning frutiger-font">
                                 Qual tipo de atendimento?
                             </Form.Label>
                             <Form.Select aria-label="Tipo de Paciente" defaultValue={"1"}>
